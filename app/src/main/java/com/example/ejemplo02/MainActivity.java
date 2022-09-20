@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         btnSaludar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (txtNombre.getText().equals("")){
+                if (txtNombre.getText().toString().trim().isEmpty()){
                     Toast.makeText(MainActivity.this, "Tienes que rellenar un nombre...", Toast.LENGTH_SHORT).show();
                 }else {
-                    lblSaludar.setText("Hola, "+txtNombre.getText()+" buenos dias");
+                    lblSaludar.setText("Hola, "+txtNombre.getText().toString()+" buenos dias");
                     txtNombre.setText("");
                 }
             }
